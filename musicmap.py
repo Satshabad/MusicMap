@@ -4,12 +4,13 @@ from subprocess import Popen, PIPE
 
 from stuff import PathStats, Previewer
 
-CMD = sys.argv[1]
+PATH = sys.argv[1]
+CMD = sys.argv[2]
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
 sys.stdin = open('/dev/tty')
-proc = Popen('find /home/satshabad/Music/local  -maxdepth 1 -mindepth 1 -type d | sort', shell=True, stdin=PIPE, stdout=PIPE)
+proc = Popen('find "%s"  -maxdepth 1 -mindepth 1 -type d | sort' % PATH, shell=True, stdin=PIPE, stdout=PIPE)
 
 to_do_paths = list(reversed(proc.communicate()[0].split('\n')))
 done_paths = []
