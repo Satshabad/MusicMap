@@ -4,8 +4,7 @@ from subprocess import Popen, PIPE
 
 from stuff import PathStats, Previewer
 
-CMD = "mv '%s' /home/satshabad/Music/new_local"
-
+CMD = sys.argv[1]
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
