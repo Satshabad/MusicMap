@@ -7,6 +7,8 @@ It's purpose is to help you iterate through your artist folders. For each artist
 
 Your music should be in a layered directory structure like so `/<artist>/<album>/<title>`. There are many tools to help you organize your music like this based on tags.
 
+You have vlc installed on a unixy machine, and vlc's command line client cvlc is also installed.
+
 This tool will skip empty folders.
 
 ## Example
